@@ -94,7 +94,7 @@ class Hybrid_Providers_HumanitarianId extends Hybrid_Provider_Model_OAuth2
     $this->user->profile->photoURL = @ $data->picture;
 
     if( empty($this->user->profile->displayName) ){
-      $this->user->profile->displayName = @ $data->user_id;
+      $this->user->profile->displayName = @ $data->id;
     }
 
     return $this->user->profile;
